@@ -1,0 +1,42 @@
+.Header
+  .HeaderTitle
+    %h2 ToDo App
+  .HeaderEdit
+    %h2 
+    = current_user.name
+.Main
+  .Mainbox
+    .Name
+      %h3 仕事🖥
+    .Form
+      %input.text{type: "text_field"}
+      .a
+        %p ➕
+    .Taskzone
+      .Task
+        .Checkbox
+          %input.Box{type: "checkbox"}
+        .Contentbox
+          .Content
+            %p ToDoアプリview作成
+          .Sub
+            %p 削除🗑
+            %p 編集✒️
+ 
+  .Mainbox
+    .Name
+      %h3 家族👨‍👩‍👧
+    .Form
+    .Task
+
+  .Mainbox
+    .Name
+      %h3 日課🏃‍♂️
+    .Form
+    .Task
+
+  .Mainbox
+    .Name
+      %h3 その他
+    .Form
+    .Task
