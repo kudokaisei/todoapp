@@ -2,7 +2,11 @@
   .HeaderTitle
     %h2 ToDo App
   .HeaderEdit
-    %h2 Name:かいせい
+    %h2 
+      Name:
+      = current_user.name
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog', class: 'icon')
 .Main
   .Mainbox
     .Name
@@ -12,30 +16,70 @@
       .a
         %p ➕
     .Taskzone
-      .Task
-        .Checkbox
-          %input.Box{type: "checkbox"}
-        .Contentbox
-          .Content
-            %p ToDoアプリview作成
-          .Sub
-            %p 削除🗑
-            %p 編集✒️
- 
+      - @jobs.each do |job|
+        .Task
+          .Checkbox
+            %input.Box{type: "checkbox"}
+          .Contentbox
+            .Content
+              = job.task
+            .Sub
+              %p 削除🗑
+              %p 編集✒️
+
   .Mainbox
     .Name
       %h3 家族👨‍👩‍👧
     .Form
-    .Task
+      %input.text{type: "text_field"}
+      .a
+        %p ➕
+    .Taskzone
+      - @families.each do |family|
+        .Task
+          .Checkbox
+            %input.Box{type: "checkbox"}
+          .Contentbox
+            .Content
+              = family.task
+            .Sub
+              %p 削除🗑
+              %p 編集✒️
 
   .Mainbox
     .Name
       %h3 日課🏃‍♂️
     .Form
-    .Task
+      %input.text{type: "text_field"}
+      .a
+        %p ➕
+    .Taskzone
+      - @routines.each do |routine|
+        .Task
+          .Checkbox
+            %input.Box{type: "checkbox"}
+          .Contentbox
+            .Content
+              = routine.task
+            .Sub
+              %p 削除🗑
+              %p 編集✒️
 
   .Mainbox
     .Name
       %h3 その他
     .Form
-    .Task
+      %input.text{type: "text_field"}
+      .a
+        %p ➕
+    .Taskzone
+      - @others .each do |other|
+        .Task
+          .Checkbox
+            %input.Box{type: "checkbox"}
+          .Contentbox
+            .Content
+              = other.task
+            .Sub
+              %p 削除🗑
+              %p 編集✒️

@@ -9,16 +9,14 @@ body {
 
 .Header {
   height: 80px;
-  border: solid 1px white;
   display: flex;
   justify-content: space-between;
   .HeaderTitle {
-    border: solid 1px white;
     height: 80px;
     width: 50%;
     font-size: 40px;
     color: yellow;
-    padding: 8px 0 0 20px;
+    padding: 8px 0 0 30px;
     h2 {
       font-weight: 700;
       font-family: Comic Sans MS;
@@ -26,19 +24,20 @@ body {
     }
   }
   .HeaderEdit {
-    border: solid 1px white;
     height: 80px;
     width: 50%;
     text-align:right;
     font-size: 30px;
     color: yellow;
-    padding: 15px 20px 0 0;
+    padding: 15px 30px 0 0;
+    .icon {
+      color: white;
+    }
   }
 }
 
 .Main {
   height: calc(100vh - 80px);
-  border: solid 1px white;
   display: flex;
   .Mainbox {
     border: solid 1px white;
@@ -110,13 +109,11 @@ body {
             border: solid 1px blue;
             width: 150px;
             height: 70px;
-            p {
-              font-size: 20px;
-              color: black;
-              font-weight: 600;
-              margin: 5px;
-              text-shadow:1px 0 5px white;
-            }
+            font-size: 20px;
+            color: black;
+            font-weight: 600;
+            text-shadow:1px 0 5px white;
+            padding: 15px 0 0 10px;
           }
           .Sub {
             border: solid 1px blue;
