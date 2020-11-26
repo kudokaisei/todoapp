@@ -3,7 +3,7 @@
     %h2 ToDo App
   .HeaderEdit
     %h2 
-      Name:
+      ユーザー名:
       = current_user.name
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog', class: 'icon')
@@ -12,9 +12,8 @@
     .Name
       %h3 仕事🖥
     .Form
-      %input.text{type: "text_field"}
-      .a
-        %p ➕
+      %p タスク追加
+      = link_to '➕', new_job_path, class:"btn"
     .Taskzone
       - @jobs.each do |job|
         .Task
@@ -22,18 +21,19 @@
             %input.Box{type: "checkbox"}
           .Contentbox
             .Content
-              = job.task
+              = link_to job_path(job.id), class: "task" do
+                = job.task
             .Sub
-              %p 削除🗑
-              %p 編集✒️
+              = link_to '削除🗑', job_path(job.id), method: :delete, class:"delete"
+              = link_to '編集✒️', edit_job_path(job.id), class:"edit"
+              
 
   .Mainbox
     .Name
       %h3 家族👨‍👩‍👧
     .Form
-      %input.text{type: "text_field"}
-      .a
-        %p ➕
+      %p タスク追加
+      = link_to '➕', new_family_path, class:"btn"
     .Taskzone
       - @families.each do |family|
         .Task
@@ -41,18 +41,18 @@
             %input.Box{type: "checkbox"}
           .Contentbox
             .Content
-              = family.task
+              = link_to family_path(family.id), class: "task" do
+                = family.task
             .Sub
-              %p 削除🗑
-              %p 編集✒️
+              = link_to '削除🗑', family_path(family.id), method: :delete, class:"delete"
+              = link_to '編集✒️', edit_family_path(family.id), class:"edit"
 
   .Mainbox
     .Name
       %h3 日課🏃‍♂️
     .Form
-      %input.text{type: "text_field"}
-      .a
-        %p ➕
+      %p タスク追加
+      = link_to '➕', new_routine_path, class:"btn"
     .Taskzone
       - @routines.each do |routine|
         .Task
@@ -60,26 +60,27 @@
             %input.Box{type: "checkbox"}
           .Contentbox
             .Content
-              = routine.task
+              = link_to routine_path(routine.id), class: "task" do
+                = routine.task
             .Sub
-              %p 削除🗑
-              %p 編集✒️
+              = link_to '削除🗑', routine_path(routine.id), method: :delete, class:"delete"
+              = link_to '編集✒️', edit_routine_path(routine.id), class:"edit"
 
   .Mainbox
     .Name
       %h3 その他
     .Form
-      %input.text{type: "text_field"}
-      .a
-        %p ➕
+      %p タスク追加
+      = link_to '➕', new_other_path, class:"btn"
     .Taskzone
-      - @others .each do |other|
+      - @others.each do |other|
         .Task
           .Checkbox
             %input.Box{type: "checkbox"}
           .Contentbox
             .Content
-              = other.task
+              = link_to other_path(other.id), class: "task" do
+                = other.task
             .Sub
-              %p 削除🗑
-              %p 編集✒️
+              = link_to '削除🗑', other_path(other.id), method: :delete, class:"delete"
+              = link_to '編集✒️', edit_other_path(other.id), class:"edit"

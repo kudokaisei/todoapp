@@ -1,0 +1,10 @@
+.Details
+  .Title
+    %h2 タスクの詳細
+  .Content
+    - @jobs.each do |job|
+      .Task
+        .Contentbox
+          .Content
+            = job.task
+            = job.details

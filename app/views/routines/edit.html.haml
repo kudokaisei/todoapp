@@ -1,0 +1,7 @@
+.Task-edit
+  .task
+    %p タスク編集
+    = form_with(model: @routine, local: true, class: "form") do |form|
+      = form.text_field :task, placeholder: "タスク内容", class: 'content'
+      = form.text_area :details, placeholder: "タスクの詳細（期日、担当者など）", class: 'area'
+      = form.submit "変更", class: 'button'
