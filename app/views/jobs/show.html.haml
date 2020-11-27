@@ -1,10 +1,11 @@
 .Details
-  .Title
-    %h2 タスクの詳細
-  .Content
-    - @jobs.each do |job|
-      .Task
-        .Contentbox
-          .Content
-            = job.task
-            = job.details
+  .Details-frame
+    .Title
+      %h2 タスクの詳細
+    .Content
+      .Content-task
+        タスク:
+        = @job.task
+      .Content-details
+        タスクの詳細:
+        = @job.details

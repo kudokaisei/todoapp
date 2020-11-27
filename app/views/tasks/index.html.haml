@@ -12,8 +12,7 @@
     .Name
       %h3 仕事🖥
     .Form
-      %p タスク追加
-      = link_to '➕', new_job_path, class:"btn"
+      = link_to 'タスク追加＋', new_job_path, class:"p"
     .Taskzone
       - @jobs.each do |job|
         .Task
@@ -32,8 +31,7 @@
     .Name
       %h3 家族👨‍👩‍👧
     .Form
-      %p タスク追加
-      = link_to '➕', new_family_path, class:"btn"
+      = link_to 'タスク追加＋', new_family_path, class:"p"
     .Taskzone
       - @families.each do |family|
         .Task
@@ -51,8 +49,7 @@
     .Name
       %h3 日課🏃‍♂️
     .Form
-      %p タスク追加
-      = link_to '➕', new_routine_path, class:"btn"
+      = link_to 'タスク追加＋', new_routine_path, class:"p"
     .Taskzone
       - @routines.each do |routine|
         .Task
@@ -70,8 +67,7 @@
     .Name
       %h3 その他
     .Form
-      %p タスク追加
-      = link_to '➕', new_other_path, class:"btn"
+      = link_to 'タスク追加＋', new_other_path, class:"p"
     .Taskzone
       - @others.each do |other|
         .Task
