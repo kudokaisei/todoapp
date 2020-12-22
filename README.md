@@ -25,11 +25,11 @@ ToDoapp
 　タスク管理をするグループを「仕事」「家族」「日課」「その他」の４つに分けることで視覚的にも見やすく、管理もしやすくなった。
 
 # Features  
-・HAML/SASS記法とBEMの命名規則に基づいたマークアップ
+・HAML/SASS記法とBEMの命名規則に基づいたマークアップ  
 ・Railsによるタスク追加、編集、表示、削除機能実装
 
 # Development  
-・Ruby on Rails
+・Ruby on Rails  
 ・VSCode(Visual Studio Code)
 
 # Plan  
